@@ -44,7 +44,6 @@ nav ul li:hover {
 }
 
 article {
-  height: 100vh;
   background-color: #ffffff;
 }
 article div {
@@ -70,8 +69,12 @@ article:nth-of-type(odd) {
 
 article, .main-container {
   box-sizing: border-box;
-  height: auto;
+  height: 100vh;
   padding: 5rem 0 15rem;
+}
+
+#article_example {
+  height: auto;
 }
 
 .main-container {
