@@ -1,0 +1,159 @@
+html {
+  scroll-behavior: smooth;
+  font-size: calc(.75rem + 0.5vw);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+h2 {
+  font-size: 3rem;
+  padding: 1rem;
+}
+
+body {
+  color: #424242;
+  font-family: "PT Sans", sans-serif;
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+nav {
+  background-image: linear-gradient(to right, #cc6699, #e3cad6);
+  padding: 1rem;
+}
+nav ul li {
+  display: inline-block;
+  font-size: 1.25rem;
+  padding: 0 0.5rem;
+}
+nav ul li a {
+  color: #ffffff;
+}
+nav ul li:hover {
+  color: #425b8c;
+}
+
+article {
+  height: 100%;
+  background-color: #ffffff;
+}
+article div {
+  opacity: 0;
+}
+article div div {
+  opacity: 1;
+}
+article ul {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+article ul li {
+  font-size: 1.3rem;
+}
+article p {
+  padding: 1rem 0;
+}
+article:nth-of-type(odd) {
+  background-color: #d0c3c9;
+}
+
+article, .main-container {
+  box-sizing: border-box;
+  height: auto;
+  padding: 5rem 0 15rem;
+}
+
+.main-container {
+  padding: 5rem 0 20rem;
+}
+.main-container h1 {
+  color: #9da6a0;
+  font-size: 5rem;
+  opacity: 0;
+  animation: 1.5s fade-in forwards;
+}
+.main-container .main-txt {
+  color: #787878;
+  display: block;
+  font-size: 1.2rem;
+  opacity: 0;
+  animation: 2s fade-in forwards;
+}
+.main-container .main-scroll-txt {
+  bottom: 3.5rem;
+  font-size: 1.5rem;
+  left: 0;
+  right: 0;
+  position: absolute;
+  opacity: 0;
+  animation: 2s fade-in forwards;
+}
+.main-container .main-scroll-txt:after {
+  display: block;
+  color: #c69;
+  content: "V";
+}
+
+.logo-txt {
+  color: #cc6699;
+}
+
+.check-txt {
+  padding: 0.25rem;
+  font-size: 2rem;
+  color: #239e2b;
+  font-weight: bold;
+}
+
+.card {
+  border-radius: 3%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
+  display: inline-block;
+  padding: 0.5rem;
+  margin: 0 0.5rem 0;
+}
+.card span {
+  font-size: 2rem;
+  font-weight: bold;
+  display: block;
+}
+.card img {
+  width: 100%;
+  height: auto;
+  border-radius: 3%;
+}
+
+.link-btn {
+  color: #ffffff;
+  padding: 0.5rem;
+  background-color: #cc6699;
+  border-radius: 1rem;
+}
+
+.fade-in {
+  animation: 2s fade-in forwards;
+}
+
+@keyframes fade-in {
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fade-out {
+  to {
+    opacity: 0;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

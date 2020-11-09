@@ -1,0 +1,180 @@
+$logo-color: #cc6699;
+$font: 'PT Sans', sans-serif;
+$font-color: #424242;
+$border-radius: 3%;
+
+html {
+    scroll-behavior: smooth;
+    font-size: calc(.75rem + 0.5vw);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+h2 {
+    font-size: 3rem;
+    padding: 1rem;
+}
+
+body {
+    color: $font-color;
+    font-family: $font;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+nav {
+    background-image: linear-gradient(to right, #cc6699, #e3cad6);;
+    padding: 1rem;
+
+    ul {
+        li {
+            display: inline-block;
+            font-size: 1.25rem;
+            padding: 0 0.5rem; 
+            
+            a {
+                color: #ffffff;
+            }
+        }
+
+        li:hover {
+            color: rgba(66, 91, 140, 1);
+        }
+    }
+}
+
+article {
+    height: 100%;
+    background-color: #ffffff;
+
+    div {
+        opacity: 0;
+
+        div {
+            opacity: 1;
+        }
+    }
+    
+    ul {
+        display: inline-flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        li {
+            font-size: 1.3rem;
+        }
+    }
+
+    p {
+        padding: 1rem 0;
+    }
+
+    &:nth-of-type(odd) {
+        background-color: #d0c3c9;
+    }
+}
+
+article, .main-container {
+    box-sizing: border-box;
+    height: auto; 
+    padding: 5rem 0 15rem;
+}
+
+.main-container {
+    padding: 5rem 0 20rem;
+
+    h1 {
+        color: rgba(157, 166, 160, 1);
+        font-size: 5rem;
+        opacity: 0;
+        animation: 1.5s fade-in forwards;
+    }
+
+    .main-txt {
+        color: #787878;
+        display: block;
+        font-size: 1.2rem;
+        opacity: 0;
+        animation: 2s fade-in forwards; 
+    }
+
+    .main-scroll-txt {
+        bottom: 3.5rem;
+        font-size: 1.5rem;
+        left: 0;
+        right: 0;
+        position: absolute;
+        opacity: 0;
+        animation: 2s fade-in forwards;
+
+        &:after {
+            display: block;
+            color: #c69;
+            content: "V";
+        }
+    }
+}
+
+.logo-txt {
+    color: $logo-color;
+}
+
+.check-txt {
+    padding: 0.25rem;
+    font-size: 2rem;
+    color: #239e2b;
+    font-weight: bold;
+}
+
+.card {
+    border-radius: $border-radius;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.4);
+    display: inline-block;
+    padding: 0.5rem;
+    margin: 0 0.5rem 0;
+
+    span {
+        font-size: 2rem;
+        font-weight: bold;
+        display: block;
+    }
+
+    img {
+        width: 100%;
+        height: auto;
+        border-radius: $border-radius;
+    }
+}
+
+.link-btn {
+    color: #ffffff;
+    padding: 0.5rem;
+    background-color: $logo-color;
+    border-radius: 1rem;
+}
+
+.fade-in {
+    animation: 2s fade-in forwards; 
+}
+
+@keyframes fade-in {
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fade-out {
+    to {
+        opacity: 0;
+    }
+}
